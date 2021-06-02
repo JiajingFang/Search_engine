@@ -38,9 +38,9 @@ The left part is the dictionary saving all different terms apear in raw data.
 The right part is a posting for each term, a posting saves all docs info for a term.
 
 
-## Ranking
+## Retrieve and Ranking
 ![](https://github.com/JiajingFang/Search_engine/blob/main/image/bm25.png)
-A traditional BM25 scoring equation is used to retrieve and rank the results. For the pic, BM25 scoring equation is shown for a **given query Q** and **a document d**.
+In **/code/BM25.py**, I show how to retrieve and rank the results by a traditional BM25 scoring equation. For the pic, BM25 scoring equation is shown for a **given query Q** and **a document d**.
 
 * qtf: term frequency in the query Q
 * tf: term frequency in the doc d
@@ -55,6 +55,15 @@ from the **first equation**, we known that a BM25 score for a given query and do
 from the **second equation**, it shows the detail of score equation for a given term and doc. 
 * **First part** is **qtf** the score of the given term in the query, as we got a short query mostly, we can ignore this part.
 * **Second part** is **TF** the score of term frequency is the given doc. The more term appears in the given doc, the higher score we got. But we use **ld/avg_l** to normalize the score.
-* Third part is the score of **IDF**. The more term appears in different docs, the lower score we got. In this way, we can give more attention to rare word which can distinguish doc from doc, while ignoring the usual words.
+* **Third part** is the score of **IDF**. The more term appears in different docs, the lower score we got. In this way, we can give more attention to rare word which can distinguish doc from doc, while ignoring the usual words.
+
+At last, the ranking is from high to low by BM25 among different docs.
 
 ## Word Similarity
+Two types of word similarity problems I have put into consideration.
+* tense and plural: **car vs cars**  **write vs wrote**
+* synomys: **pavement vs sidewalk**  **food vs meal**
+
+For the first type we can solve by lemmatization for raw data and query pre process.
+
+But for the second type, it's a bit tough. I try to work it out by query rewriting with word2vec model. Firstly, I try with the model in spacy which I also use it for NERD, but the computation is slow. So I turn to github for other word2vec model training [repos](https://github.com/RaRe-Technologies/gensim-data). Taking the performane into account, I use an open-source pre trained model instead of training a new one.
