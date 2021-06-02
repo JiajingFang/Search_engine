@@ -31,7 +31,7 @@ In **/code/new_index.py** an Inverted index Algorithm is used to index the raw d
 
 In Inverted index model, not only the term frequency (tf, the appearance frequency for a term in a certain doc d) will be recorded, but the doc frequency (df, the appearance frequency for a term in all docs) 
 
-After buildling the inverted index database, we will get the model **ir.db** under **/data/**. The visulization of this model will be like the pic. 
+After buildling the inverted index database, we will get the model **ir.db** under **/data/**. The visualization of this model will be like the pic. 
 
 The left part is the dictionary saving all different terms apear in raw data. 
 
