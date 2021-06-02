@@ -18,7 +18,9 @@ python -m spacy download en_core_web_md
 ```shell
 python -m gensim.downloader --download glove-wiki-gigaword-100
 ```
-**glove-wiki-gigaword-100** is a pre-trained word2vec model and is used for query rewriting so that similar words can be applied to search. [Here](https://github.com/RaRe-Technologies/gensim-data), dataset can be found to train one's own word2vec model and some pre-trained one can also be found and applied directly(as the limit of time, I use a pre-trained one instead)
+**glove-wiki-gigaword-100** is a pre-trained word2vec model and is used for query rewriting so that similar words can be applied to search. 
+
+[Here](https://github.com/RaRe-Technologies/gensim-data), dataset can be found to train one's own word2vec model and some pre-trained one can also be found and applied directly(as the limit of time, I use a pre-trained one instead)
 ## modify template
 1.add dependencies in package.json<br>
 ```shell
