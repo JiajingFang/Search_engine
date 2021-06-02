@@ -49,10 +49,12 @@ A traditional BM25 scoring equation is used to retrieve and rank the results. Fo
 * N: docs amount
 * df: document frequency for the given term t and doc d
 * b,k1,k2: tuning parameter
+
 from the **first equation**, we known that a BM25 score for a given query and doc is the sum of the score for all terms in the query regard to the given doc.
 
 from the **second equation**, it shows the detail of score equation for a given term and doc. 
-* First part is the score of the given term in the query, as we got a short query mostly, we can ignore this part.
-* Second part is the score of TF term frequency is the given doc. The more term appears in the given doc, the higher score we got. But we use **ld/avg_l** to normalize the score.
-* Third part is the score of IDF. The more term appears in different docs, the lower score we got. In this way, we can give more attention to rare word which can distinguish doc from doc, while ignoring the usual words.
+* **First part** is **qtf** the score of the given term in the query, as we got a short query mostly, we can ignore this part.
+* **Second part** is **TF** the score of term frequency is the given doc. The more term appears in the given doc, the higher score we got. But we use **ld/avg_l** to normalize the score.
+* Third part is the score of **IDF**. The more term appears in different docs, the lower score we got. In this way, we can give more attention to rare word which can distinguish doc from doc, while ignoring the usual words.
 
+## Word Similarity
