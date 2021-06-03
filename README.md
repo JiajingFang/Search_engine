@@ -77,7 +77,7 @@ But for the second type, it's a bit tough. I try to work it out by query rewriti
 * run **/code/BM_25.PY** and input the searching query
 
 ## Demo
-![](https://github.com/JiajingFang/Search_engine/blob/main/image/demo1.png =100x20)
+<img src=https://github.com/JiajingFang/Search_engine/blob/main/image/demo1.png width=50% />
 
 In demo 1, after inputing query **pavement** top 10 document ranked by BM25 from high to low is present. The first value is BM25 score in this doc and the second value is the doc's name.
 
