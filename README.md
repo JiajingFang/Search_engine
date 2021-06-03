@@ -82,14 +82,14 @@ But for the second type, it's a bit tough. I try to work it out by query rewriti
 * run **/code/BM_25.PY** and input the searching query
 
 ## Demo
-<img src=https://github.com/JiajingFang/Search_engine/blob/main/image/demo1.png width=45% />
+<img src=https://github.com/JiajingFang/Search_engine/blob/main/image/demo1.png width=55% />
 
 In demo 1, after inputing query **pavement** top 10 document ranked by BM25 from high to low is present. The first value is BM25 score in this doc and the second value is the doc's name.
 
 After that, request of apply similar search is present. If y is input, then top 3 most similar queries **asphalt, sidewalk, sidewalks** will be used to do the search and return top 3 result from each query.
 
 
-<img src=https://github.com/JiajingFang/Search_engine/blob/main/image/demo2.png width=45% />
+<img src=https://github.com/JiajingFang/Search_engine/blob/main/image/demo2.png width=55% />
 
 In demo 2, longer query **Harry Potter** is applied. And we can see that for the similar queries. There are **potter, harry, steven(director), rowling, j.k.(author), jack**. And they will pair up and do the similar search.
 
