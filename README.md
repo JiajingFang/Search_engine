@@ -54,16 +54,22 @@ from the **first equation**, we known that a BM25 score for a given query and do
 
 from the **second equation**, it shows the detail of score equation for a given term and doc. 
 * **First part** is **qtf** the score of the given term in the query, as we got a short query mostly, we can ignore this part.
-* **Second part** is **TF** the score of term frequency is the given doc. The more term appears in the given doc, the higher score we got. But we use **ld/avg_l** to normalize the score.
+* **Second part** is **TF** the score of term frequency in the given doc. The more term appears in the given doc, the higher score we got. In case that for longer doc there will be more chance that a given term will appear,  **ld/avg_l** is used to normalize the score.
 * **Third part** is the score of **IDF**. The more term appears in different docs, the lower score we got. In this way, we can give more attention to rare word which can distinguish doc from doc, while ignoring the usual words.
 
-At last, the ranking is from high to low by BM25 among different docs.
+At last, the ranking is from high to low by BM25 for a given query among different docs.
 
 ## Word Similarity
 Two types of word similarity problems I have put into consideration.
-* tense and plural: **car vs cars**  **write vs wrote**
-* synomys: **pavement vs sidewalk**  **food vs meal**
+* tense and plural: **car vs cars** || **write vs wrote**
+* synomys: **pavement vs sidewalk** || **food vs meal**
 
 For the first type we can solve by lemmatization for raw data and query pre process.
 
 But for the second type, it's a bit tough. I try to work it out by query rewriting with word2vec model. Firstly, I try with the model in spacy which I also use it for NERD, but the computation is slow. So I turn to github for other word2vec model training [repos](https://github.com/RaRe-Technologies/gensim-data). Taking the performane into account, I use an open-source pre trained model instead of training a new one.
+
+
+## Usage
+1 put all the data from [blog_corpus](https://u.cs.biu.ac.il/~koppel/BlogCorpus.htm) under **/data/blogs**
+2 run **/code/new_index.py** to build the inverted index model, it will be save as **/data/ir.db**
+3 run **/code/BM_25.PY** and input the searching query
