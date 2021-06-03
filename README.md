@@ -40,6 +40,7 @@ The right part is a posting for each term, a posting saves all docs info for a t
 
 ## Retrieve and Ranking
 ![](https://github.com/JiajingFang/Search_engine/blob/main/image/bm25.png)
+
 In **/code/BM25.py**, I show how to retrieve and rank the results by a traditional BM25 scoring equation. For the pic, BM25 scoring equation is shown for a **given query Q** and **a document d**.
 
 * qtf: term frequency in the query Q
@@ -74,5 +75,5 @@ But for the second type, it's a bit tough. I try to work it out by query rewriti
 * run **/code/new_index.py** to build the inverted index model, it will be save as **/data/ir.db**
 * run **/code/BM_25.PY** and input the searching query
 
-##Demo
+## Demo
 
