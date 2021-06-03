@@ -26,7 +26,10 @@ python -m gensim.downloader --download glove-wiki-gigaword-100
 
 
 ## Indexing
-<img src=https://github.com/JiajingFang/Search_engine/blob/main/image/invertindex.png width=50% div align="middle"/>
+<div  align="center">
+<img src=https://github.com/JiajingFang/Search_engine/blob/main/image/invertindex.png width=50% />
+</div>
+
 
 In **/code/new_index.py** an Inverted index Algorithm is used to index the raw data, make sure all the raw data is put under the file **/data/blogs** before running the script.
 
@@ -40,7 +43,9 @@ The right part is a posting for each term, a posting saves all docs info for a t
 
 
 ## Retrieve and Ranking
-<img src=https://github.com/JiajingFang/Search_engine/blob/main/image/bm25.png width=50% div align="middle"/>
+<div  align="center">
+<img src=https://github.com/JiajingFang/Search_engine/blob/main/image/bm25.png width=50% />
+</div>
 
 In **/code/BM25.py**, I show how to retrieve and rank the results by a traditional BM25 scoring equation. For the pic, BM25 scoring equation is shown for a **given query Q** and **a document d**.
 
