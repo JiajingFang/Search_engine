@@ -70,6 +70,6 @@ But for the second type, it's a bit tough. I try to work it out by query rewriti
 
 
 ## Usage
-1 put all the data from [blog_corpus](https://u.cs.biu.ac.il/~koppel/BlogCorpus.htm) under **/data/blogs**
-2 run **/code/new_index.py** to build the inverted index model, it will be save as **/data/ir.db**
-3 run **/code/BM_25.PY** and input the searching query
+* put all the data from [blog_corpus](https://u.cs.biu.ac.il/~koppel/BlogCorpus.htm) under **/data/blogs**
+* run **/code/new_index.py** to build the inverted index model, it will be save as **/data/ir.db**
+* run **/code/BM_25.PY** and input the searching query
