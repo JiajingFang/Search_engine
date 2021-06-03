@@ -27,6 +27,7 @@ python -m gensim.downloader --download glove-wiki-gigaword-100
 
 ## Indexing
 ![](https://github.com/JiajingFang/Search_engine/blob/main/image/invertindex.png)
+
 In **/code/new_index.py** an Inverted index Algorithm is used to index the raw data, make sure all the raw data is put under the file **/data/blogs** before running the script.
 
 In Inverted index model, not only the term frequency (tf, the appearance frequency for a term in a certain doc d) will be recorded, but the doc frequency (df, the appearance frequency for a term in all docs) 
