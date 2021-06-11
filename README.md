@@ -1,5 +1,5 @@
 # Search_engine
-a search engine index by Inverted index, ranked by BM25, performs work similarity by a pre-trained work2vec model
+a search engine index by Inverted index, ranked by BM25, performs word similarity by a pre-trained work2vec model
 ## Requirements
 ```shell
 pip install python==3.6
